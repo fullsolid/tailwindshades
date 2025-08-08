@@ -1,12 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.231.6/containers/javascript-node
 {
-  "name": "Node.js",
+  "name": "Tailwind Shades",
   "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "VARIANT": "18"
-    }
+    "dockerfile": "Dockerfile"
   },
   "runArgs": [
     "--name",
