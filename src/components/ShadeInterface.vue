@@ -388,6 +388,10 @@ export default {
     baseShadeStop: Number,
     dbShade: {},
     version: Number,
+    isNavigatingBack: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {
     SliderInput,
@@ -421,13 +425,15 @@ export default {
   },
   watch: {
     'result.shades'() {
-      this.updateURLHash()
-      this.$emit(
-        'update:colors',
-        this.result.shades.map(s =>
-          s.override ? '#' + s.override.hex : '#' + s.hex
+      if (!this.isNavigatingBack) {
+        this.updateURLHash()
+        this.$emit(
+          'update:colors',
+          this.result.shades.map(s =>
+            s.override ? '#' + s.override.hex : '#' + s.hex
+          )
         )
-      )
+      }
     },
     'code.name'() {
       this.updateURLHash()
@@ -522,7 +528,6 @@ export default {
     },
   },
   mounted() {
-    // this.$nextTick(() => {
     this.resetOverrides()
 
     let parsed = false
@@ -536,7 +541,6 @@ export default {
     if (!parsed) {
       this.hsl = [...this.initialHSL]
     }
-    // })
   },
   methods: {
     codeDisplayString() {
@@ -635,6 +639,9 @@ export default {
       return { hue: -1, saturation: -1, lightness: -1 }
     },
     updateURLHash() {
+      if (this.isNavigatingBack) {
+        return
+      }
       clearTimeout(this.delay.hash.n)
       this.delay.hash.n = setTimeout(() => {
         const newURLHash = this.urlHash()

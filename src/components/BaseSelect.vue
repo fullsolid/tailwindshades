@@ -226,6 +226,7 @@
         @set-base-shade-stop="baseShadeStop = $event"
         @hash-changed="handleHashChange"
         @update:oldVersionMessages="$event => (oldVersionMessages = $event)"
+        :isNavigatingBack="isNavigatingBack"
         ref="shadeInterface"
       />
     </div>
@@ -285,6 +286,7 @@ export default {
       baseShadeStop: 5,
       version: 1,
       oldVersionMessages: [],
+      isNavigatingBack: false,
     }
   },
   computed: {
@@ -323,6 +325,8 @@ export default {
       this.hex = this.originShade.colors[this.baseShadeStop]
       this.step = 'shades'
       this.$store.commit('setOriginShade', {})
+    } else if (window.location.hash.length > 2) {
+      this.step = 'shades'
     }
 
     if (!this.myLikedShades.length) {
@@ -418,12 +422,15 @@ export default {
       }
     },
     handleHashChange() {
-      this.hasURLHash = window.location.hash.length > 2
-      if (!this.hasURLHash) {
+      if (window.location.hash.length <= 2) {
+        this.step = 'base'
         return
       }
 
-      // Force reload in case the URL hash changes manually.
+      if (this.step === 'base' && window.location.hash.length > 2) {
+        this.step = 'shades'
+      }
+
       let h = window.location.hash.substring(1)
       this.shadeHasUnsavedChanges = this.shade.code !== h
       if (
@@ -460,18 +467,26 @@ export default {
       window.getSelection().removeAllRanges()
     },
     backToBaseSelection() {
+      this.isNavigatingBack = true
+
       this.$store.commit('setOriginShade', {})
+      this.shade = this.emptyShade()
+      this.hex = ''
+      this.shadeHasUnsavedChanges = false
+      this.$refs.shadeInterface?.resetVersionChanges()
+
       window.location.hash = ''
       window.history.replaceState(
         null,
         '',
         window.location.pathname + window.location.search
       )
-      this.shade = this.emptyShade()
-      this.hex = ''
+
       this.step = 'base'
-      this.shadeHasUnsavedChanges = false
-      this.$refs.shadeInterface?.resetVersionChanges()
+
+      this.$nextTick(() => {
+        this.isNavigatingBack = false
+      })
     },
     emptyShade() {
       return {
