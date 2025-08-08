@@ -42,12 +42,12 @@
         <transition name="fade">
           <div
             class="px-8 py-4 mt-8 btn"
-            :style="`background-color: ${hex}; color: ${textColorByBrightness()}`"
+            :style="`background-color: ${normalizedHex}; color: ${textColorByBrightness()}`"
             v-show="validHex"
             @click="enterShadeStep"
           >
             <p class="text-xl md:text-2xl">Shade</p>
-            <p class="mt-1 text-xs">{{ hex }}</p>
+            <p class="mt-1 text-xs">{{ normalizedHex }}</p>
           </div>
         </transition>
       </div>
@@ -306,10 +306,17 @@ export default {
     },
     validHex() {
       let hex = this.hex
-      if (this.hex.charAt(0) !== '#') {
+      if (hex.charAt(0) !== '#') {
         hex = '#' + hex
       }
       return /^#[0-9A-F]{6}$/i.test(hex)
+    },
+    normalizedHex() {
+      let hex = this.hex
+      if (hex.charAt(0) !== '#') {
+        hex = '#' + hex
+      }
+      return hex
     },
     ...mapGetters([
       'theme',
@@ -498,7 +505,7 @@ export default {
       if (!this.validHex) {
         return
       }
-      let rgb = converter.hex.rgb(this.hex)
+      let rgb = converter.hex.rgb(this.normalizedHex)
 
       // https://www.w3.org/TR/AERT/#color-contrast
       let brightness = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000
@@ -506,6 +513,10 @@ export default {
     },
     enterShadeStep() {
       this.step = 'shades'
+      // Normalize hex value when entering shade step.
+      if (this.validHex && this.hex.charAt(0) !== '#') {
+        this.hex = '#' + this.hex
+      }
       // Explicitly mark as having unsaved changes when entering this step
       // from the base selection, assuming the user is logged in and it's a new shade.
       if (this.isLoggedIn && this.loginFeatures && !this.shade.id) {
