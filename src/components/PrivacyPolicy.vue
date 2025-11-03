@@ -17,7 +17,10 @@
 
     <h2 class="text-lg font-semibold mt-8 mb-2">1. Definitions</h2>
     <ul class="list-disc pl-6 mb-4">
-      <li><strong>Operator:</strong> FullSolid</li>
+      <li>
+        <strong>Operator:</strong>
+        <a target="_blank" href="https://www.fullsolid.com">Fullsolid</a>
+      </li>
       <li><strong>Email:</strong> info@fullsolid.com</li>
       <li><strong>Country:</strong> Cyprus</li>
       <li>
