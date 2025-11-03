@@ -17,8 +17,8 @@
 
     <h2 class="text-lg font-semibold mt-8 mb-2">1. Definitions</h2>
     <ul class="list-disc pl-6 mb-4">
-      <li><strong>Operator:</strong> Tailwind Shades</li>
-      <li><strong>Email:</strong> leo.stratigakis@gmail.com</li>
+      <li><strong>Operator:</strong> FullSolid</li>
+      <li><strong>Email:</strong> info@fullsolid.com</li>
       <li><strong>Country:</strong> Cyprus</li>
       <li>
         <strong>Website: </strong>
@@ -104,6 +104,49 @@
       <li>Authorities if required by law</li>
     </ul>
 
+    <h2 class="text-lg font-semibold mt-8 mb-2">5A. Analytics</h2>
+    <p>
+      We use analytics tools to understand how visitors use our website and to
+      improve our Service.
+    </p>
+
+    <ul class="list-disc pl-6 mb-4">
+      <li>
+        <strong>Google Analytics:</strong> A web analytics service provided by
+        Google LLC. Google Analytics uses cookies and similar technologies to
+        collect and analyze website traffic data. Data may be transferred to and
+        processed in the United States. For more information, see
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline"
+        >
+          Google’s Privacy Policy </a
+        >.
+      </li>
+      <li>
+        <strong>Plausible Analytics:</strong> A privacy-friendly, cookieless
+        analytics service based in the EU. Plausible does not collect any
+        personal data or use tracking cookies. It records only anonymous
+        aggregate usage information to help us understand traffic patterns.
+        Learn more at
+        <a
+          href="https://plausible.io/data-policy"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline"
+        >
+          Plausible’s Data Policy </a
+        >.
+      </li>
+    </ul>
+
+    <p>
+      You may manage your cookie preferences for Google Analytics at any time
+      using the consent banner or your browser settings.
+    </p>
+
     <h2 class="text-lg font-semibold mt-8 mb-2">6. Data Retention</h2>
     <p>
       We retain your data as long as your account is active or as necessary to
@@ -120,7 +163,7 @@
     </ul>
     <p>
       To exercise these rights, contact us at
-      <strong>leo.stratigakis@gmail.com</strong>.
+      <strong>info@fullsolid.com</strong>.
     </p>
 
     <h2 class="text-lg font-semibold mt-8 mb-2">8. Security</h2>
@@ -144,7 +187,7 @@
     <h2 class="text-lg font-semibold mt-8 mb-2">11. Contact Us</h2>
     <p>
       If you have any questions, email us at:
-      <strong>leo.stratigakis@gmail.com</strong>
+      <strong>info@fullsolid.com</strong>
     </p>
 
     <p class="mt-8">

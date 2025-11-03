@@ -62,7 +62,7 @@
     <h2 class="text-lg font-semibold mt-8 mb-2">8. Contact</h2>
     <p class="mb-2">
       If you have questions about these terms, contact us at:
-      <strong>leo.stratigakis@gmail.com</strong>
+      <strong>info@fullsolid.com</strong>
     </p>
 
     <h2 class="text-lg font-semibold mt-8 mb-2">9. Disclaimer</h2>

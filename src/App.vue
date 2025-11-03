@@ -36,7 +36,7 @@
 
             <div class="inline-block ml-2 md:ml-8">
               <a
-                href="https://github.com/leoquack/tailwindshades"
+                href="https://github.com/fullsolid/tailwindshades"
                 class="text-2xl cursor-pointer"
                 target="_blank"
               >
