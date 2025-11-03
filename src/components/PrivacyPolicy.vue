@@ -18,14 +18,19 @@
     <h2 class="text-lg font-semibold mt-8 mb-2">1. Definitions</h2>
     <ul class="list-disc pl-6 mb-4">
       <li>
-        <strong>Operator:</strong>
-        <a target="_blank" href="https://www.fullsolid.com">Fullsolid</a>
+        <strong>Operator: </strong>
+        <a target="_blank" href="https://www.fullsolid.com" class="underline"
+          >Fullsolid</a
+        >
       </li>
       <li><strong>Email:</strong> info@fullsolid.com</li>
       <li><strong>Country:</strong> Cyprus</li>
       <li>
         <strong>Website: </strong>
-        <a href="https://www.tailwindshades.com" target="_blank"
+        <a
+          href="https://www.tailwindshades.com"
+          target="_blank"
+          class="underline"
           >tailwindshades.com</a
         >
       </li>
