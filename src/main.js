@@ -4,7 +4,6 @@ import { createRouter } from './router'
 import App from './App.vue'
 import '@/assets/main.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import VueGtag from 'vue-gtag'
 import Notifications from '@kyvg/vue3-notification'
 import FloatingVue from 'floating-vue'
 import 'floating-vue/dist/style.css'
@@ -29,33 +28,6 @@ const head = createHead()
 app.mixin(VueHeadMixin)
 app.use(head)
 app.use(VueHighlightJS)
-
-app.use(VueGtag, {
-  config: {
-    id: 'G-RKC3YFFTTL',
-  },
-  enabled: false,
-})
-
-// Wait for Cookiebot to be ready
-window.addEventListener('CookiebotOnConsentReady', () => {
-  const tryOptIn = () => {
-    const gtag = app.config.globalProperties?.$gtag
-    const consented = window.Cookiebot?.consent?.statistics
-
-    if (consented && gtag) {
-      gtag.optIn()
-      gtag.pageview({
-        page_path: window.location.pathname,
-        page_title: document.title,
-      })
-    } else if (!gtag) {
-      setTimeout(tryOptIn, 100)
-    }
-  }
-
-  tryOptIn()
-})
 
 const supabase = createClient(
   'https://tsmcdgolhhtzzotghypz.supabase.co',
