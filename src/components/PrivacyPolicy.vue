@@ -14,7 +14,7 @@
       <li>
         <strong>Operator: </strong>
         <a href="https://www.fullsolid.com" target="_blank" class="underline"
-          >FullSolid</a
+          >Fullsolid</a
         >
       </li>
       <li><strong>Email:</strong> info@fullsolid.com</li>
