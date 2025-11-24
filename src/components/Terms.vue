@@ -1,7 +1,7 @@
 <template>
   <div class="prose mx-auto p-4 max-w-3xl text-theme py-12">
     <h1 class="text-xl font-bold mb-4">Terms & Conditions</h1>
-    <p class="mb-2"><strong>Last updated:</strong> July 19, 2025</p>
+    <p class="mb-2"><strong>Last updated:</strong> November 2025</p>
 
     <p class="mb-2">
       By using Tailwind Shades (<a

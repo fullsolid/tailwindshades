@@ -7,7 +7,7 @@
   },
   "runArgs": [
     "--name",
-    "devcontainer_tailwindshades"
+    "devcontainer_tailwindshades_legacy"
   ],
   "customizations": {
     "vscode": {

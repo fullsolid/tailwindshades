@@ -42,7 +42,7 @@
       </li>
       <li>
         <strong>Service Providers:</strong> Third-party tools such as Supabase
-        (auth, storage) and Plausible (analytics).
+        (auth, storage) and PostHog (analytics).
       </li>
     </ul>
 
@@ -95,17 +95,13 @@
     <h2 class="text-lg font-semibold mt-8 mb-2">5. Analytics</h2>
     <p>
       We use
-      <a href="https://plausible.io" target="_blank" class="underline"
-        >Plausible Analytics</a
-      >, a privacy-friendly, cookieless service based in the EU. Plausible does
-      not store personal data or use cookies. It collects only anonymous,
+      <a href="https://posthog.com" target="_blank" class="underline">PostHog</a
+      >, a privacy-friendly analytics platform. PostHog collects anonymous,
       aggregated usage information to help us understand general traffic
-      patterns. See
-      <a
-        href="https://plausible.io/data-policy"
-        target="_blank"
-        class="underline"
-        >Plausible’s Data Policy</a
+      patterns and improve the Service. You can opt out of analytics tracking at
+      any time through your browser settings. See
+      <a href="https://posthog.com/privacy" target="_blank" class="underline"
+        >PostHog's Privacy Policy</a
       >
       for details.
     </p>
