@@ -4,15 +4,11 @@
 
 #### A tool to help generate color shades for Tailwind CSS
 
-Live: [https://www.tailwindshades.com](https://www.tailwindshades.com)
+Live version: [https://www.tailwindshades.com](https://www.tailwindshades.com)
 
 ## Legacy Notice
 
 This codebase is no longer actively maintained. It represents the original version of Tailwind Shades built with Vue.js and Supabase.
-
-The current version has been migrated to:
-- **Frontend**: Next.js application
-- **Backend**: Laravel API
 
 ## Features (Historical)
 
